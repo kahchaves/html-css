@@ -10,24 +10,40 @@
         }
 
         table{width: 500px;
-        border-collapse: collapse;}
+        border-collapse: collapse;
+        position: relative;}
 
     td, th{border: 1px solid black;
         padding: 10px;}
 
         thead, tfoot{background-color: gray;
             color: white;}
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+        
+        tbody > tr:nth-child(2n)
+        {background-color: lightgray;}
             
         td.num{ text-align: right;}
+
+        caption{ font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;}
     </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidades Federativas.</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -54,10 +70,11 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td>111.019.804</td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, nisi voluptates? Earum eligendi autem molestiae perspiciatis nisi architecto nemo quia eaque maiores, reiciendis pariatur laborum? Harum omnis eius fugit aut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nam magnam voluptates, officiis perspiciatis veniam perferendis sed facere corrupti veritatis consequatur labore incidunt ducimus magni hic iusto facilis vel dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius maxime accusantium vitae quidem, quod voluptatibus mollitia atque quos debitis reiciendis, dolorum commodi minus soluta facilis aperiam doloribus qui delectus et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur optio, id aliquam facilis numquam illum tempore minus sit maiores dolor velit illo, accusamus consequuntur beatae quis, aut quaerat autem magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam dolores voluptatem accusamus sequi ratione, rerum sint, atque nisi suscipit, amet tempore sunt culpa harum incidunt reprehenderit obcaecati odio vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, autem! Beatae rem deserunt, sapiente amet sit laudantium nihil, neque illum dignissimos, odio iste illo animi quia veritatis consequatur autem ducimus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, quas quis perspiciatis vero unde deserunt a dolor saepe nemo dicta accusantium. Necessitatibus sapiente eum sint excepturi sit, veritatis totam culpa.</p>
 </body>
 </html>
